@@ -1,0 +1,351 @@
+/* Grid layout */
+.grid-container{
+    width: calc(100%);
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 2fr);
+    grid-template-rows: auto;
+    grid-template-areas:
+    "nav nav nav"
+    "header header header" 
+    "sidebar main main" 
+    "footer footer footer";
+    height: 100vh;
+    grid-gap:10px;
+}
+.header{
+    grid-area: header;
+    text-align: center;
+    margin-top: 1%;
+    position: relative;
+    text-align: center;
+    color: black;
+}
+/* Flexbox in Grid */
+/* Here is my flexbox which is a one-dimensional layout for a navigation bar. 
+The nav element has display:flex set to make it a flex container, 
+and "justify-content: space-between" to push the navigation links to either side of the container, 
+and "align-items: center" to center the links vertically within the container. */
+.navbar{
+    grid-area: nav;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    padding: 1.6rem 10% 1.6rem 6%;
+    height: 2.5rem;
+    background-color: #fff;
+    box-shadow: 0 1px 4px rgba(146, 161, 176, 0.3);
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.navbar li {
+margin-left: 2.5rem;
+}
+/* Flexbox in Grid End */
+
+.content{
+    grid-area: main;
+    margin-top:2%;
+    margin-left:1%;
+    padding-right:3%;
+}
+.sidebar{
+    grid-area: sidebar;
+    width:18rem;
+    width:80%;
+    padding: 0 1rem 1rem 1rem;
+    margin-left: 2%;
+}
+.footer{
+    grid-area: footer;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #145364;
+    height: auto;
+    margin-top: 3rem;
+    padding-top: 1rem;
+    color: #fff;
+}
+.footer-content p {
+    color: #fff;
+}
+/* Grid layout End */
+
+/* Activity Grid Reordering */
+.activity-grid {
+    display: inline-grid;
+    grid-gap: 10px;
+    grid-template-areas: 'one two three four';
+}
+.activity1{
+    grid-area: one;
+}
+.activity2{
+    grid-area: two;
+}
+.activity3{
+    grid-area: three;
+
+}
+.activity4{
+    grid-area: four;
+}
+/* Activity Grid Reordering End */
+
+/* Mobile Version */
+@media screen and (min-device-width: 320px) and (max-device-width: 760px) {	
+    .grid-container{
+        width: calc(100%);
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;
+        grid-template-areas:
+        "nav"
+        "header" 
+        "sidebar" /* the right content column show up underneath the left column at mobile version */
+        "main" 
+        "footer";
+        height: 100vh;
+        grid-gap:10px;
+    }
+    .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.6rem 0;
+        align-items: center;
+    }
+    .content {
+        margin-top: 0%;
+        padding-left: 0%;
+        padding-right: 0%;
+        width:90% !important;
+        margin-left: 6%;
+    }
+    .sidebar {
+        margin-top: 5%;
+        margin-left: 4%;
+        width: calc(20rem + 2vw);
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    /* Activity Grid Reordering */
+    .activity-grid {
+        display: inline-grid;
+        grid-gap: 10px;
+        grid-template-areas: 'one'
+        'two' 
+        'three' 
+        'four';
+    }
+    .activity1{
+        grid-area: one;
+    }
+    .activity2{
+        grid-area: two;
+    }
+    .activity3{
+        grid-area: three;
+    
+    }
+    .activity4{
+        grid-area: four;
+    }
+    /* Activity Grid Reordering End */
+   
+    .navbar ul{
+        display: none;
+        text-align: center;
+        margin-top: 2rem;
+    }
+    .navbar li {
+        margin-left: 0;
+        text-align: center;
+    }
+    .menu-icon{
+        display: inline-grid;
+        margin-left: 0.7rem;
+    }
+    .logo {
+        font-size: calc(1rem + 0.5vw);
+        margin-left:1.5rem;
+        margin-bottom:1rem;
+    }
+    .navbar ul li a {
+        font-size: calc(1rem + 0.5vw);
+    }
+    .navbar ul li a.active,
+    .navbar ul li a:hover {
+      border-bottom: none;
+      padding: 1.5rem 0;
+    }
+    .banner-image {
+        margin-top: 19% !important;
+        width: 100%;
+        height:12rem;
+    }
+   
+    .footer-bottom {
+        margin-left: 6%;
+    }
+    .footer-content p {
+        max-width: 21rem;
+        color: #fff;
+    }
+    .btn-filter {
+        width: 92%;
+        padding: 4px 20px 4px 4px;
+        height: 2.7rem;
+        border: 2px solid #145364;
+        margin: 0.5rem 0rem;
+    }
+    .multicol section {
+        width: 98%;
+        background-color: #dfe9eb;
+    }
+    h2 {
+        font-size: calc(1.5rem+0.5vw);
+        line-height: calc(2rem + 0.6vw);
+        width: 90%;
+    }
+    .sidebar h2{
+        margin-top: 0px !important;
+        display: none;
+        font-size: calc(1rem+0.5vw);
+        line-height: calc(1rem + 0.6vw);
+    }
+    .activity .item img {
+        width: calc(19rem + 2.5vw);
+    }
+    .activity .item p {
+        font-size: calc(1rem + 0.5vw);
+        line-height: calc(1rem + 0.6vw);
+    }
+    fieldset{
+        border-radius: 5px;
+        margin-top: 20px;
+    }
+    section h4 {
+        font-size: calc(1.2rem + 0.5vw);
+        line-height: calc(1rem + 0.6vw);
+    }
+    .btn-filter {
+        font-size: calc(1rem + 0.5vw);
+        width: 100%;
+    }
+    .btn-add-cart{
+        width:50%;
+    }
+    .chk-input {
+        font-size: calc(1.2rem + 0.5vw);
+    }
+}
+
+
+/* Tablet Version */
+@media screen and (min-device-width: 761px) and (max-device-width: 1024px) {	
+    .grid-container{
+        width: calc(100%);
+        display: grid;
+        grid-template-columns: 1fr; 
+        grid-template-rows: auto;
+        grid-template-areas:
+        "nav"
+        "header" 
+        "sidebar" 
+        "main" /* Grid Reordering: the right content column show up underneath the left column at mobile version */
+        "footer";
+        height: 100vh;
+        grid-gap:10px;
+    }
+    .sidebar {
+        width: calc(40rem + 2vw);
+        padding: 0 1rem 1rem 1rem;
+        margin: 2rem auto;
+        margin-top:3rem;
+    }
+    .content {
+        grid-area: main;
+        padding-left: 2%;
+        width: 45rem;
+        margin: auto;
+    }
+    .navbar{
+        padding: 1.6rem 3% 1.6rem 3%;
+    }
+    /* Activity Grid Reordering */
+    .activity-grid {
+        display: inline-grid;
+        grid-gap: 26px;
+        grid-template-areas: 'one two'
+        'three four';
+    }
+    .activity1{
+        grid-area: one;
+    }
+    .activity2{
+        grid-area: two;
+    }
+    .activity3{
+        grid-area: three;
+    
+    }
+    .activity4{
+        grid-area: four;
+    }
+    /* Activity Grid Reordering End */
+    .banner-image{
+        margin-top: 9%;
+    }
+    h2 {
+        font-size: calc(2rem + 0.5vw);
+        width: 40rem;
+    }
+    .sidebar h2{
+        margin-top:20px !important;
+        font-size: calc(1.5rem + 0.5vw);
+        display: none;
+    }
+    .footer-bottom{
+        margin-left: 31%;
+    }
+    h4{
+        padding: 1rem;
+    }
+    .activity .item img {
+        width: 19rem;
+        height: 12rem;
+    }
+    .activity .item p {
+        font-size: calc(0.9rem + 0.5vw);
+        line-height: calc(1rem + 0.6vw);
+    }
+    fieldset{
+        border-radius: 5px;
+    }
+    section h4 {
+        font-size: calc(1.2rem + 0.5vw);
+        line-height: calc(1rem + 0.6vw);
+    }
+    .btn-filter {
+        font-size: calc(1rem + 0.5vw);
+        margin: 0.5rem auto;
+    }
+    .chk-input {
+        font-size: calc(1.2rem + 0.5vw);
+    }
+    .navbar ul li a, .logo {
+        font-size: calc(1.1rem + 0.3vw);
+    }
+}
