@@ -159,7 +159,7 @@ div.desc {
 
 /* Tablet Version */
 @media screen and (min-device-width: 601px) and (max-device-width: 1024px) {
-    .overview-section{
+    .overview-card{
 
         display: grid;
         grid-template-columns: 1fr 1fr;

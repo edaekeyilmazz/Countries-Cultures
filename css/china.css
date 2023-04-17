@@ -1,6 +1,6 @@
-* {
+/* * {
     box-sizing: border-box;
-}
+} */
 
 body {
     margin: 0;
@@ -72,6 +72,7 @@ a.button:hover {
         width: 49.99999%;
         margin: 6px 0;
     }
+    
 }
 
 @media only screen and (max-width: 500px) {
@@ -85,3 +86,29 @@ a.button:hover {
     display: table;
     clear: both;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar {
+      display: block;
+      height: calc(2.9rem);
+    }
+    .logo-icon {
+      margin-left: calc(10em);
+      width: calc(23em);
+    }
+  
+    .navbar ul li a {
+      font-size: calc(1rem + 1vw);
+    }
+    .card-container{
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .card{
+        width: 86.99999%;
+    }
+    a.button{
+        width: 85%;
+    }
+}  
