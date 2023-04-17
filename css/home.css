@@ -132,6 +132,11 @@ input[type="button"]:hover {
   width: 100%;
 }
 
+.footer {
+  padding-top: 0;
+  padding-bottom: 1rem;
+}
+
 @media (max-width: 480px) {
   #slide {
     max-width: auto;
@@ -180,7 +185,7 @@ input[type="button"]:hover {
   }
 
   .footer-bottom {
-    margin-left: calc(3em);
+    margin-left: calc(4em);
   }
 }
 
