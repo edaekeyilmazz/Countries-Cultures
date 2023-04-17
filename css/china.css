@@ -46,6 +46,27 @@ div.desc {
     transform: scale(1.05);
 }
 
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    
+    text-decoration: none;
+    color: initial;
+    text-align: center;
+    width: 100%;
+    background-color: #ffa30d;
+    color: white;
+    padding: 1em 1em;
+    margin: 0.9em;
+    border: none;
+    border-radius: 1em;
+    cursor: pointer;
+}
+
+a.button:hover {
+  background-color: #ffa30dbf;
+}
 @media only screen and (max-width: 700px) {
     .card {
         width: 49.99999%;
