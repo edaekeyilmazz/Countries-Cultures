@@ -74,6 +74,44 @@ p{
     border-radius: 30px;
     display: inline-block;
 }
+div.gallery {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    border-radius: 20px;
+}
+
+div.gallery:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+div.gallery img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+}
+
+div.card-title {
+    font-size: clamp(1.2rem, 3vw, 1.5rem);
+    font-weight: bold;
+    padding: 15px;
+}
+
+div.desc {
+    font-size: clamp(16px, 2.5vw, 18px);
+    padding: 15px;
+    line-height: 150%;
+}
+
+.card {
+    margin-top: 30px;
+    padding: 0 10px;
+    float: left;
+    width: 22.99999%;
+    transition: transform 0.5s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
 .each-item:hover img{
     transform: scale(1.1);
 }
