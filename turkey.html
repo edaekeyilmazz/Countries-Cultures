@@ -1,54 +1,158 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/turkey.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"
+    />
+    <link rel="stylesheet" href="../js/jquery-ui-1.12.1.custom/jquery-ui.css" />
     <title>Home</title>
-</head>
-<body>
+  </head>
+  <body>
     <div class="grid-container">
-        
-        <!-- NAVBAR   -->
-        <div class="navbar">
-            <span class="menu-icon"><img class="menu-icon" src="./img/burger-bar.png" /></span>
-            <a href="/index.html" class="logo"><span><img class="logo-icon" src="./images/logo-image.png"></span></a>
-            <ul>
-                <li><a href="/index.html">HOME</a></li>
-                <li><a href="/china.html">CHINA</a></li>
-                <li><a href="/india.html">INDIA</a></li>
-                <li><a href="/turkey.html">TURKEY</a></li>
-            </ul>
-        </div>
-            <!-- HEADER -->
-        <div class="header">
-            <img class="banner-image"
-            src= "./images/turkey-banner.jpg"
-            style="width:100%;"
-            alt="Home Banner Image">
-        </div>
-            <div class="content">
-                <h2>Welcome to Turkey</h2>
-                <p>Welcome to Turkey. The beautiful and fabled land is known for its deeply traditional customs but is also endlessly surprising. It’s the one destination that ends up on every traveler’s bucket list. This country has an extreme history and enormous diversity. For many foreign nationals, India is considered the world's most colorful, cultural, chaotic, and spiritual country. And some come to seek cultural and spiritual influences. 
-                </p>
-        </div>  
- 
-        <div class="footer">
-            <div class="footer-content">
-                <h3></h3>
-                <p></p>
-                <ul class="socials">
-                    <span><img class="social-media-icon" src="./images/instagram.png"></span>
-                    <span><img class="social-media-icon" src="./images/twitter.png"></span>
-                    <span><img class="social-media-icon" src="./images/facebook.png"></span>
-                    <span><img class="social-media-icon" src="./images/whatsapp.png"></span>
-                </ul>
+      <!-- NAVBAR   -->
+      <div class="navbar">
+        <span class="menu-icon"
+          ><img class="menu-icon" src="./img/burger-bar.png"
+        /></span>
+        <a href="/index.html" class="logo">
+          <span><img class="logo-icon" src="./images/logo-image.png" /></span
+        ></a>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="china.html">CHINA</a></li>
+          <li><a href="india.html">INDIA</a></li>
+          <li><a href="turkey.html">TURKEY</a></li>
+        </ul>
+      </div>
+      <div class="header">
+        <img
+          class="banner-img"
+          width="100%" 
+          src="./images/turkey/banner.jpg"
+          srcset="
+            ./images/turkey/banner-200.jpg 200w,
+            ./images/turkey/banner-400.jpg 400w,
+            ./images/turkey/banner.jpg 882w
+          "
+          sizes="( min-device-width:320px and max-device-width: 768px) 100px,
+					(min-device-width:769px and max-device-width: 1024px) 200px,
+					882px"
+          alt="A panaromic view of Istanbul, Turkey"
+        />
+      </div>
+      <div class="content">
+        <h2>Welcome to Turkey!</h2>
+
+        <p class="description">
+          Turkey is a transcontinental country located at the crossroads of
+          Europe and Asia. It is bordered by eight countries, including Greece,
+          Bulgaria, and Armenia to the west, and Iran, Iraq, and Syria to the
+          east. The country has a rich cultural heritage and a long history,
+          with evidence of human settlement dating back thousands of years.
+          Today, Turkey is a diverse and modern nation with a population of over
+          80 million people. It is a popular tourist destination, with
+          attractions such as Istanbul's historic Old City, the stunning
+          Mediterranean coastline, and the unique landscapes of Cappadocia. The
+          country is also known for its delicious cuisine, which blends Middle
+          Eastern, Mediterranean, and Central Asian influences. Whether you're
+          interested in history, culture, or natural beauty, Turkey has
+          something to offer everyone.
+        </p>
+
+        <!-- CAPPADOCIA -->
+        <div class="image-container">
+          <div class="card">
+            <img
+              src="./images/turkey/cappadocia.jpg"
+              alt="Kapadokya, Nevşehir"
+            />
+            <div class="card-content">
+              <h2 class="image-title">Kapadokya, Nevşehir</h2>
             </div>
-            <div class="footer-bottom">
-                <p>copyright &copy; <a href="#">Countries&Cultures</a>  </p>
+          </div>
+
+          <!-- DOLMABAHCE, ISTANBUL -->
+          <div class="card">
+            <img
+              src="./images/turkey/dolmabahce.avif"
+              alt="Dolmabahçe Palace, Istanbul"
+            />
+            <div class="card-content">
+              <h2 class="image-title">Dolmabahçe Palace, Istanbul</h2>
             </div>
+          </div>
+
+          <!-- EPHESUS, IZMIR -->
+          <div class="card">
+            <img src="./images/turkey/ephesus.jpg" alt="Efes,Izmir" />
+            <div class="card-content">
+              <h2 class="image-title">Efes,Izmir</h2>
+            </div>
+          </div>
+
+          <!-- FETHIYE, MUGLA -->
+          <div class="card">
+            <img src="./images/turkey/fethiye.jpg" alt="Fethiye, Muğla" />
+            <div class="card-content">
+              <h2 class="image-title">Fethiye, Muğla</h2>
+            </div>
+          </div>
+
+          <!-- DALYAN, MUGLA -->
+          <div class="card">
+            <img src="./images/turkey/dalyan.jpg" alt="Dalyan, Muğla" />
+            <div class="card-content">
+              <h2 class="image-title">Dalyan, Muğla</h2>
+            </div>
+          </div>
+
+          <!-- KAPUTAS, ANTALYA -->
+          <div class="card">
+            <img src="./images/turkey/kaputas.jpg" alt="Kaputas, Antalya" />
+            <div class="card-content">
+              <h2 class="image-title">Kaputas, Antalya</h2>
+            </div>
+          </div>
         </div>
+      </div>
+      <div class="footer">
+        <div class="footer-content">
+          <h3></h3>
+          <p></p>
+          <ul class="socials">
+            <span
+              ><img class="social-media-icon" src="./images/instagram.png"
+            /></span>
+            <span
+              ><img class="social-media-icon" src="./images/twitter.png"
+            /></span>
+            <span
+              ><img class="social-media-icon" src="./images/facebook.png"
+            /></span>
+            <span
+              ><img class="social-media-icon" src="./images/whatsapp.png"
+            /></span>
+          </ul>
+        </div>
+        <div class="footer-bottom">
+          <p>copyright &copy; <a href="#">Countries&Cultures</a></p>
+        </div>
+      </div>
     </div>
-</body>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="../js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="./js/home.js"></script>
+  </body>
 </html>

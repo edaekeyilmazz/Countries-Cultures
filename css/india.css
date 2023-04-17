@@ -1,5 +1,12 @@
 .overview{
-    padding: 50px 0;
+    padding: 30px 0;
+}
+.three-col{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+    grid-gap: 40px;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
 }
 h1 {
     font-size: calc(2rem + 1vw);
@@ -16,13 +23,6 @@ p{
     font-size: clamp(16px, 2.5vw, 18px);
     padding: 15px;
     line-height: 150%;
-}
-.three-col{
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-    grid-gap: 40px;
-    margin-top: 4rem;
-    margin-bottom: 3rem
 }
 .each-item{
     border-radius: 20px;
@@ -50,7 +50,7 @@ p{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-/*    padding: 0 40px;*/
+    /* padding: 0 40px; */
     text-align: center;
     transition: height 0.5s;
 
@@ -65,15 +65,7 @@ p{
     color: white;
     padding-bottom: 10px;
 }
-.primary-cta a {
 
-    background-color: white;
-    color: black;
-    text-decoration: none;
-    padding: 10px 25px;
-    border-radius: 30px;
-    display: inline-block;
-}
 div.gallery {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 20px;
@@ -112,6 +104,15 @@ div.desc {
 .card:hover {
     transform: scale(1.05);
 }
+.primary-cta a {
+
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 30px;
+    display: inline-block;
+}
 .each-item:hover img{
     transform: scale(1.1);
 }
@@ -128,7 +129,7 @@ div.desc {
     color: white;
     text-align: center;
 }
-
+  
 /* Mobile version */
 @media screen and (min-device-width: 320px) and (max-device-width: 600px) {
     .card{
@@ -136,7 +137,19 @@ div.desc {
         width: 100%;
         padding: 0;
     }
+    .navbar {
+        display: block;
+      }
+    
+      .logo-icon {
+        width: calc(17em);
+        margin-left: calc(1.6em);
+      }
+      .navbar ul li a {
+        font-size: calc(0.7rem + 0.5vw);
+      }
 }
+
 /* Tablet Version */
 @media screen and (min-device-width: 601px) and (max-device-width: 1024px) {
     .overview-section{
@@ -147,4 +160,17 @@ div.desc {
     .card{
         width: 93.99999%;
     }
+    .navbar {
+        display: block;
+        height: calc(2.9rem);
+      }
+      .logo-icon {
+        margin-left: calc(10em);
+        width: calc(23em);
+      }
+    
+      .navbar ul li a {
+        font-size: calc(1rem + 1vw);
+      }
+    
 }
