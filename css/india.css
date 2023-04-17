@@ -129,6 +129,10 @@ div.desc {
     color: white;
     text-align: center;
 }
+.footer {
+    padding-top: 0;
+    padding-bottom: 1rem;
+}
   
 /* Mobile version */
 @media screen and (min-device-width: 320px) and (max-device-width: 600px) {
@@ -148,6 +152,9 @@ div.desc {
       .navbar ul li a {
         font-size: calc(0.7rem + 0.5vw);
       }
+        .footer-bottom {
+    margin-left: calc(4em);
+  }
 }
 
 /* Tablet Version */
@@ -171,6 +178,9 @@ div.desc {
     
       .navbar ul li a {
         font-size: calc(1rem + 1vw);
+      }
+      .footer-bottom{
+        margin-left: calc(33%);
       }
     
 }
