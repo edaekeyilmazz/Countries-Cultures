@@ -1,51 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css" />
+    <link rel="stylesheet" href="../js/jquery-ui-1.12.1.custom/jquery-ui.css" />
     <title>Home</title>
-</head>
-<body>
-    <div class="grid-container">  
-        <!-- NAVBAR   -->
-        <div class="navbar">
-            <span class="menu-icon"><img class="menu-icon" src="./img/burger-bar.png" /></span>
-            <a href="/index.html" class="logo"> <span><img class="logo-icon" src="./images/logo-image.png"></span></a>
-            <ul>
-                <li><a href="/index.html">HOME</a></li>
-                <li><a href="/china.html">CHINA</a></li>
-                <li><a href="/india.html">INDIA</a></li>
-                <li><a href="/turkey.html">TURKEY</a></li>
-            </ul>
+  </head>
+  <body>
+    <div class="grid-container">
+      <!-- NAVBAR   -->
+      <div class="navbar">
+        <span class="menu-icon"><img class="menu-icon" src="./img/burger-bar.png" /></span>
+        <a href="/index.html" class="logo">
+          <span><img class="logo-icon" src="./images/logo-image.png" /></span
+        ></a>
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="china.html">CHINA</a></li>
+          <li><a href="india.html">INDIA</a></li>
+          <li><a href="turkey.html">TURKEY</a></li>
+        </ul>
+      </div>
+      <div class="header">
+        <div id="slider">
+          <img id="slide" src="./images/india-banner-image.jpg" alt="" />
+          <div id="slides">
+            <img src="./images/india-banner-image.jpg" alt="India" />
+            <img src="./images/china-home-banner.jpg" alt="China" />
+            <img src="./images/turkey-banner.jpg" alt="Turkey" />
+          </div>
         </div>
-            <!-- HEADER -->
-        <div class="header">
-            <img class="banner-image"
-            src= "./images/home.jpg"
-            style="width:100%;"
-            alt="Home Banner Image">
-        </div>
-        <div class="content">
-            <h2>Welcome to Home Page</h2>
-            <p>CountryReports delivers unique content on Culture, Countries and Travel from around the world. Students, tourists, libraries, business and researchers appreciate our ability deliver hard to find, fun and current information. Get started, pick a country!</p>
-      </div>  
-        <div class="footer">
-            <div class="footer-content">
-                <h3></h3>
-                <p></p>
-                <ul class="socials">
-                    <span><img class="social-media-icon" src="./images/instagram.png"></span>
-                    <span><img class="social-media-icon" src="./images/twitter.png"></span>
-                    <span><img class="social-media-icon" src="./images/facebook.png"></span>
-                    <span><img class="social-media-icon" src="./images/whatsapp.png"></span>
-                </ul>
+      </div>
+      <div class="content">
+        <h2>Welcome to Countries & Cultures</h2>
+        <p class="sub-heading">Fuel Your Soul With Travel.</p>
+
+        <p class="description">
+          Welcome to our website where you can explore the diverse cultures and lifestyles of
+          various countries around the world. We are excited to share our collection of blogs
+          featuring different countries and their unique customs, traditions, and ways of life. With
+          our comprehensive coverage of different regions, you can experience the sights, sounds,
+          and flavors of each country from the comfort of your home. Our team of writers has put
+          together a rich tapestry of narratives, anecdotes, and insights that will take you on a
+          virtual journey around the world. Get started, pick a country!
+        </p>
+
+        <div class="countries-container">
+          <div class="card">
+            <img src="./images/india-home-card.jpg" alt="India" />
+            <div class="card-content">
+              <h2 class="country-title">
+                India <img src="./images/india.png" class="india-flag" />
+              </h2>
+              <p class="country-description">
+                India, country that occupies the greater part of South Asia. Its capital is New
+                Delhi, built in the 20th century just south of the historic hub of Old Delhi to
+                serve as India’s administrative centre.
+              </p>
+              <a href="india.html">Read more</a>
             </div>
-            <div class="footer-bottom">
-                <p>copyright &copy; <a href="#">Countries&Cultures</a>  </p>
+          </div>
+          <div class="card">
+            <img src="./images/turkey-home-card.jpg" alt="Turkey" />
+            <div class="card-content">
+              <h2 class="country-title">
+                Turkey <img src="./images/turkey.png" class="turkey-flag" />
+              </h2>
+              <p class="country-description">
+                Turkey is a large peninsula that bridges the continents of Europe and Asia. Turkey
+                is surrounded on three sides by the Black Sea, the Mediterranean Sea, and the Aegean
+                Sea.
+              </p>
+              <a href="turkey.html">Read more</a>
             </div>
+          </div>
+          <div class="card">
+            <img src="./images/china-home-card.jpg" alt="Image" />
+            <div class="card-content">
+              <h2 class="country-title">
+                China <img src="./images/china.png" class="china-flag" />
+              </h2>
+              <p class="country-description">
+                China is located in Southeast Asia and its coast is lined by the Pacific Ocean.
+                China is the third largest country in land mass, after Russia and Canada. The area
+                of China is 9.6 million square kilometers and its coastline is 18,000 kilometers.
+              </p>
+              <a href="china.html">Read more</a>
+            </div>
+          </div>
         </div>
-    </div> 
-</body>
+        <div class="form-container">
+          <h3 class="contact-form-label" id="get-in-touch">Get in touch with us!</h3>
+          <form class="contact-form">
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name.." />
+
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Your email.." />
+
+            <label for="mobile_no">Mobile Number</label>
+            <input type="number" id="mobile_no" name="mobile_no" placeholder="Your mobile no.." />
+
+            <input type="button" value="Submit" />
+          </form>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="footer-content">
+          <h3></h3>
+          <p></p>
+          <ul class="socials">
+            <span><img class="social-media-icon" src="./images/instagram.png" /></span>
+            <span><img class="social-media-icon" src="./images/twitter.png" /></span>
+            <span><img class="social-media-icon" src="./images/facebook.png" /></span>
+            <span><img class="social-media-icon" src="./images/whatsapp.png" /></span>
+          </ul>
+        </div>
+        <div class="footer-bottom">
+          <p>copyright &copy; <a href="#">Countries&Cultures</a></p>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <script src="../js/jquery-ui-1.12.1.custom/jquery-ui.js"></script>
+    <script src="./js/home.js"></script>
+  </body>
 </html>

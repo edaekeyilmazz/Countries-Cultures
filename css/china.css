@@ -1,6 +1,6 @@
-* {
+/* * {
     box-sizing: border-box;
-}
+} */
 
 body {
     margin: 0;
@@ -38,7 +38,7 @@ div.desc {
     margin-top: 30px;
     padding: 0 10px;
     float: left;
-    width: 24.99999%;
+    width: 22.99999%;
     transition: transform 0.5s;
 }
 
@@ -46,11 +46,33 @@ div.desc {
     transform: scale(1.05);
 }
 
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    
+    text-decoration: none;
+    color: initial;
+    text-align: center;
+    width: 100%;
+    background-color: #ffa30d;
+    color: white;
+    padding: 1em 1em;
+    margin: 0.9em;
+    border: none;
+    border-radius: 1em;
+    cursor: pointer;
+}
+
+a.button:hover {
+  background-color: #ffa30dbf;
+}
 @media only screen and (max-width: 700px) {
     .card {
         width: 49.99999%;
         margin: 6px 0;
     }
+    
 }
 
 @media only screen and (max-width: 500px) {
@@ -64,3 +86,29 @@ div.desc {
     display: table;
     clear: both;
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+    .navbar {
+      display: block;
+      height: calc(2.9rem);
+    }
+    .logo-icon {
+      margin-left: calc(10em);
+      width: calc(23em);
+    }
+  
+    .navbar ul li a {
+      font-size: calc(1rem + 1vw);
+    }
+    .card-container{
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .card{
+        width: 86.99999%;
+    }
+    a.button{
+        width: 85%;
+    }
+}  
